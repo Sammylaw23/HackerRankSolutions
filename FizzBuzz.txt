@@ -1,0 +1,21 @@
+internal class HackerRank
+    {
+        internal static void FizzBuzz(int n)
+        {
+            for (int num = 1; num < n + 1; num++)
+            {
+                if (IsAMultipleOfThree(num) && IsAMultipleOfFive(num))
+                    Console.WriteLine("FizzBuzz");
+                else if (IsAMultipleOfThree(num))
+                    Console.WriteLine("Fizz");
+                else if (IsAMultipleOfFive(num))
+                    Console.WriteLine("Buzz");
+                else
+                    Console.WriteLine(num);
+            }
+        }
+
+        private static bool IsAMultipleOfFive(int num) => (num % 5 == 0) ? true : false;
+        private static bool IsAMultipleOfThree(int num) => (num % 3 == 0) ? true : false;        
+        
+    }
